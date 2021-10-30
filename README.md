@@ -4,14 +4,14 @@
 
 ## Installating the app
 
-- ### Windows
-  - [Setup](https://github.com/JustE3saR/quick-qr/releases/) - 
+- Windows
+  - [Setup](https://github.com/JustE3saR/quick-qr/releases/)
   - [Portable](https://github.com/JustE3saR/quick-qr/releases/) - the version that you can run without installation
 
-- ### Linux
+- Linux
   - Linux is not supported yet
 
-- ### macOS
+- macOS
   - macOS is not supported yet
 
 ## **Note**
