@@ -1,21 +1,68 @@
 {
-  "name": "jslab",
-  "version": "0.1.0",
+  "name": "quick-qr",
+  "description": "A clean-ui and fast qr code creator.",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Mohammed Taha",
+    "email": "gsft22221@gmail.com"
+  },
+  "build": {
+    "appId": "com.app.quickqr",
+    "productName": "Quick QR",
+    "copyright": "Copyright © 2021 Mohammed Taha",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "differentialPackage": false
+    }
+    "portable": {
+      "artifactName": "${productName} Portable ${version}.${ext}"
+    }
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder -w",
+    "release": "npm run react-build && electron-builder --publish=always",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
   "dependencies": {
+    "@codemirror/lang-javascript": "^0.19.2",
+    "@electron/remote": "^2.0.1",
+    "@heroicons/react": "^1.0.5",
+    "@sentry/react": "^6.13.3",
+    "@sentry/tracing": "^6.13.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
+    "codemirror": "^5.63.3",
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "electron-dl": "^3.2.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-save-file": "^1.0.2",
+    "is-electron": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "wait-on": "^6.0.0",
     "web-vitals": "^1.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1"
   },
   "eslintConfig": {
     "extends": [
