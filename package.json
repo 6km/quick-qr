@@ -20,7 +20,7 @@
     },
     "nsis": {
       "differentialPackage": false
-    }
+    },
     "portable": {
       "artifactName": "${productName} Portable ${version}.${ext}"
     }

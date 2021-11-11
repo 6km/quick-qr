@@ -35,7 +35,7 @@ function createWindow() {
     : `file://${path.join(__dirname, "../build/index.html")}`
   );
 
-  ipcMain.on('asynchronous-message', function (evt, {message, args}) {
+  ipcMain.on('asynchronous-message', (evt, {message, args}) => {
     switch (message) {
       case 'appMinimize':
         BrowserWindow.getFocusedWindow().minimize();
@@ -44,17 +44,17 @@ function createWindow() {
         app.exit();
         break;
       case 'showSaveDialog':
-        (async function () {
+        (function () {
           const options = {
             title: 'Save as..',
-            defaultPath: app.getPath('desktop') + '/qrcode.png'
+            defaultPath: `${app.getPath('desktop')}/qrcode.png`
           };
-          dialog.showSaveDialog(options).then((file) => {
+          dialog.showSaveDialog(options).then(async (file) => {
             const win = BrowserWindow.getFocusedWindow();
             if (file.filePath) {
               const directory = file.filePath.toString().split("\\");
               const filename = directory.pop();
-              electronDl.download(win, args.url, {
+              await electronDl.download(win, args.url, {
                 filename,
                 directory: directory.join("\\"),
                 openFolderWhenDone: true
@@ -65,6 +65,8 @@ function createWindow() {
           });
         })();
         break;
+
+      // no default
     }
   });
 
