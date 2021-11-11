@@ -1,7 +1,7 @@
 {
   "name": "quick-qr",
   "description": "A clean-ui and fast qr code creator.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": {
     "name": "Mohammed Taha",
