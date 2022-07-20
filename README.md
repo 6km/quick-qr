@@ -1,3 +1,9 @@
+### ⚠ This repository is now read-only. If you would like to continue maintaining it, please contact me.
+
+<br>
+<br>
+<br>
+
 <a href="https://www.producthunt.com/posts/quick-qr?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-quick-qr" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=317937&theme=light" alt="Quick QR - A clean-ui and fast qr code creator. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## Installing the app
