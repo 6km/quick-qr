@@ -42,7 +42,7 @@
     "@electron/remote": "^2.0.1",
     "@heroicons/react": "^1.0.5",
     "@sentry/react": "^6.14.1",
-    "@sentry/tracing": "^6.14.1",
+    "@sentry/tracing": "^6.18.1",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
